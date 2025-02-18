@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Internship</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: goldenrod;
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+            border-bottom: 3px solid goldenrod;
+            padding-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+            color: goldenrod;
+            max-width: 200px;
+        }
+
+        .gallery img {
+            max-width: 200px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s;
+            box-sizing: border-box;
+            border: 1px solid rgb(227, 175, 44);
+            border-radius: 10px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            filter: sepia(1) hue-rotate(45deg) saturate(5);
+        }
+
+        .gallery .description {
+            margin-top: 5px;
+            font-size: 11px;
+            text-shadow: 1px 1px 2px rgba(255, 220, 24, 0.775);
+        }
+
+        .fullscreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoomIn 0.5s ease forwards;
+        }
+
+        .fullscreen img.small {
+            transform: scale(0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                background: rgba(0, 0, 0, 0);
+            }
+            to {
+                background: rgba(0, 0, 0, 0.9);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoomOut {
+            from {
+                opacity: 1;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.1);
+            }
+        }
+
+        .description-section {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 20px;
+            border: 1px solid goldenrod;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px goldenrod;
+        }
+
+        .description-section h2 {
+            color: goldenrod;
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+            margin-bottom: 15px;
+        }
+
+        a.github-link {
+            color: goldenrod;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid goldenrod;
+            border-radius: 5px;
+            background-color: black;
+            box-shadow: 0 0 10px goldenrod;
+            transition: box-shadow 0.5s ease-in-out;
+            display: inline-block;
+        }
+
+        a.github-link:hover {
+            box-shadow: 0 0 5px 4px goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cisco Internship</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Intern\cisco\India_Internship-certificate (Cybersecurity Essentials)_page-0001.jpg" alt="Course Certificate 1" onclick="showFullscreen(this)">
+            <div class="description">Course Certificate 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Intern\cisco\India_Internship-certificate (Introduction to Packet Tracer)_page-0001.jpg" alt="Course Certificate 2" onclick="showFullscreen(this)">
+            <div class="description">Course Certificate 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Intern\cisco\India_Internship-certificate Introduction to Cybersecurity_page-0001.jpg" alt="Course Certificate 3" onclick="showFullscreen(this)">
+            <div class="description">Course Certificate 3</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Intern\cisco\KRU _ STU6610d61b5a9771712379419_page-0001.jpg" alt="Cisco Internship Certificate" onclick="showFullscreen(this)">
+            <div class="description">Cisco Internship Certificate</div>
+        </div>
+    </div>
+
+    <div class="description-section">
+        <h1>Cisco Internship</h1>
+    <p><strong>Duration:</strong> May 2024 - July 2024</p>
+
+    <p>I successfully completed the Cisco Virtual Internship, where I tackled an exciting and challenging problem statement: <strong>Cyber Shield: Defending the Network</strong>. Here's a quick rundown of what I did, with a sprinkle of humor and professionalism:</p>
+
+    <h2>Part 1: Securing the College Network</h2>
+    <p><strong>Tasks:</strong></p>
+    <ul>
+        <li><strong>Campus Network Analysis:</strong> I examined my college's network like Sherlock Holmes, identifying devices, connections, and security controls.</li>
+        <li><strong>Network Mapping:</strong> Used Cisco Packet Tracer to create a beautiful network diagram showcasing routers, switches, and firewalls.</li>
+        <li><strong>Attack Surface Mapping:</strong> I played the role of a cyber detective, identifying potential vulnerabilities and proposing countermeasures to stop attackers in their tracks.</li>
+    </ul>
+    <p><strong>Deliverables:</strong></p>
+    <ul>
+        <li>A detailed network topology diagram (even my laptop seemed impressed!).</li>
+        <li>A security assessment report highlighting risks and offering solutions that made me feel like a cybersecurity superhero.</li>
+    </ul>
+
+    <h2>Part 2: Designing a Hybrid Working Environment</h2>
+    <p><strong>Scenario:</strong> My college needed a solution for faculty and students to access resources securely from both home and campus.</p>
+    <p><strong>Tasks:</strong></p>
+    <ul>
+        <li>Explored the best network security products to create a hybrid working model.</li>
+        <li>Updated the campus topology to include these magical security components.</li>
+        <li>Proposed solutions that balanced security and convenience, proving that I’m not just about locking doors but opening them wisely.</li>
+    </ul>
+    <p><strong>Deliverables:</strong></p>
+    <ul>
+        <li>A shiny new topology with hybrid work-ready features.</li>
+        <li>Detailed reasoning for my design—because every decision deserves a story!</li>
+    </ul>
+
+    <h2>Part 3: Controlling Campus Internet Misuse</h2>
+    <p><strong>Scenario:</strong> Students were browsing irrelevant sites (probably looking for memes), and the college wanted to control web content access.</p>
+    <p><strong>Tasks:</strong></p>
+    <ul>
+        <li>Researched how to block access to non-educational content (yes, no more cat videos during lectures).</li>
+        <li>Enhanced the topology with content filtering solutions.</li>
+        <li>Wrote simple and effective policies to restrict web categories, ensuring productivity and sanity for everyone.</li>
+    </ul>
+    <p><strong>Deliverables:</strong></p>
+    <ul>
+        <li>An updated topology that’s a fortress against distractions.</li>
+        <li>Easy-to-follow policies that even a bored student would understand.</li>
+    </ul>
+
+    <h2>Cloud Security: Protecting an E-commerce Platform</h2>
+    <p><strong>Scenario:</strong> A start-up needed help to handle traffic during flash sales and defend against DDoS attacks (think "mission impossible," but for the cloud).</p>
+    <p><strong>Tasks:</strong></p>
+    <ul>
+        <li>Improved scalability and availability with smart designs—because nobody likes a crashing website during a sale!</li>
+        <li>Added backup services to prevent data loss during bottlenecks.</li>
+        <li>Designed a perimeter layer to fend off DDoS attacks like a cyber ninja.</li>
+    </ul>
+    <p><strong>Deliverables:</strong></p>
+    <ul>
+        <li>A revised architecture diagram that’s ready for both bursts of traffic and sneaky attackers.</li>
+        <li>A solid plan explaining how my design will save the day during high-pressure sales events.</li>
+    </ul>
+
+    <p><strong>Takeaway:</strong></p>
+    <p>This internship was an amazing journey where I transformed into a network wizard and cloud architect. I learned how to analyze, design, and secure networks, all while keeping things practical and efficient. My deliverables didn’t just solve problems—they told stories of resilience, scalability, and cybersecurity awesomeness!</p>
+
+    <p><em>(P.S. Don’t worry, no networks were harmed in the making of this internship.)</em></p>
+
+
+    </div>
+
+    <a href="https://github.com/Thomas1510/Cisco-Internship/" class="github-link" target="_blank">Visit My GitHub Profile</a>
+    <a href="index.html#exp-section" class="github-link" target="_blank">Go back Home</a>
+    
+    <div class="fullscreen" onclick="hideFullscreen()">
+        <img src="" alt="Fullscreen Image" onclick="toggleSize(event)">
+    </div>
+
+    <script>
+        function showFullscreen(image) {
+            const fullscreenDiv = document.querySelector('.fullscreen');
+            const fullscreenImg = fullscreenDiv.querySelector('img');
+            fullscreenImg.src = image.src;
+            fullscreenDiv.style.display = 'flex';
+            fullscreenImg.style.animation = 'zoomIn 0.5s ease forwards';
+        }
+
+        function hideFullscreen() {
+            const fullscreenDiv = document.querySelector('.fullscreen');
+            const fullscreenImg = fullscreenDiv.querySelector('img');
+            fullscreenImg.style.animation = 'zoomOut 0.5s ease';
+            setTimeout(() => {
+                fullscreenDiv.style.display = 'none';
+            }, 500);
+        }
+
+        function toggleSize(event) {
+            const image = event.target;
+            image.classList.toggle('small');
+        }
+
+        document.querySelector('.fullscreen').addEventListener('click', (event) => {
+            if (event.target.tagName !== 'IMG') {
+                hideFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

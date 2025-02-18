@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Portfolio</title>
+	
+	<style>
+		body, html {
+		  margin: 0;
+		  padding: 0;
+		  overflow-x: hidden;
+		}
+	
+		* {
+		  box-sizing: border-box;
+		}
+	
+		.container {
+		  width: 100%;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		  padding: 20px;
+		}
+	
+		img {
+		  max-width: 100%;
+		  height: auto;
+		}
+	
+		.extra-wide {
+		  width: 150%; /* This causes overflow */
+		}
+	  </style>
+	  <style>
+		.modal {
+		  display: none; 
+		  position: fixed; 
+		  z-index: 1000; 
+		  left: 0; 
+		  top: 0; 
+		  width: 100%; 
+		  height: 100%; 
+		  overflow: auto; 
+		  background-color: rgba(0,0,0,0.8); 
+		  justify-content: center;
+		  align-items: center;
+		  animation: fadeIn 1s ease-in-out;
+		}
+		.modal-content {
+		  background-color: black;
+		  padding: 20px;
+		  border-radius: 10px;
+		  box-shadow: 0 4px 8px rgba(255,215,0,0.5);
+		  text-align: center;
+		  color: black;
+		  animation: slideIn 0.5s ease-in-out;
+		}
+		.close-btn {
+		  margin-top: 20px;
+		  padding: 10px 20px;
+		  background-color: gold;
+		  color: black;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  transition: background-color 0.3s;
+		}
+		.close-btn:hover {
+		  background-color: #ffd700;
+		}
+		@keyframes fadeIn {
+		  from {opacity: 0;}
+		  to {opacity: 1;}
+		}
+		@keyframes slideIn {
+		  from {transform: translateY(-50px); opacity: 0;}
+		  to {transform: translateY(0); opacity: 1;}
+		}
+	  </style>
+	  <script>
+		window.onload = function() {
+		  if (window.innerWidth < 768) {
+			document.getElementById('myModal').style.display = 'flex';
+		  }
+		};
+	
+		function closeModal() {
+		  document.getElementById('myModal').style.display = 'none';
+		}
+	  </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="styleshgoeet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		  <p>Use desktop for better experience</p>
+		  <button class="close-btn" onclick="closeModal()">OK</button>
+		</div>
+	  </div>
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	  
+	      <p class="navbar-brand">PORTFOLIO&nbsp;&nbsp;&nbsp;✂</p>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Education</span></a></li>
+			  <li class="nav-item"><a href="#exp-section" class="nav-link"><span>Experience</span></a></li>
+	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Certifications</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Achievements & Competitions</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/main1.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Thomas A</span></h1>
+			            <h2 class="mb-4">Cyber Security Student</h2>
+			            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=thomasa1510@gmail.com&su=Hiring"target="_blank" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section"target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/main2.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm a <span>Penetration tester</span></h1>
+			            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=thomasa1510@gmail.com&su=Hiring"target="_blank" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section"target="_blank" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img-about img d-flex align-items-stretch">
+    					<div class="overlay"></div>
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/main3-2.png);">
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p>
+						Hi, I’m Thomas A, a computer engineering student with a passion for cybersecurity. I love solving problems and creating tools to make the digital world safer.
+
+I’ve worked on exciting projects like encrypting credit card data, building secure login systems, and analyzing network vulnerabilities. Through internships at top cybersecurity companies, I’ve gained real-world experience in protecting data and preventing security breaches.
+
+I’ve also earned certifications from Google, EC-Council, and Microsoft, and participated in Capture The Flag (CTF) events, where I sharpened my skills in ethical hacking and problem-solving.
+
+I enjoy working on new challenges, learning about advanced security techniques, and collaborating with others. Let’s connect to explore how we can build a more secure online space!
+					</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            	<li class="d-flex"><span>Name:</span> <span>THOMAS A</span></li>
+		            	<li class="d-flex"><span>Date of birth:</span> <span>May 06, 2005</span></li>
+		            	<li class="d-flex"><span>Place:</span> <span>Tenkasi, Tamil Nadu  </span></li>
+		            	<li class="d-flex"><span>Pin code:</span> <span>627806</span></li>
+		            	<li class="d-flex"><span>Email:</span> <span>thomasa1510@gmail.com</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span>8300838214</span></li>
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+	                <span class="number" data-number="19">0</span>
+	                <span>Project complete</span>
+                </p>
+                <p><a href="docs\CV.pdf"target="_blank" class="btn btn-primary py-3 px-3">Download CV</a></p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Education</h1>
+            <h2 class="mb-4">Education</h2>
+            <p>
+				I am currently studying for a Bachelor of Technology in Computer Engineering, with a specialization in Cybersecurity, at Karunya Institute of Technology and Sciences in Coimbatore. My current CGPA is 8.26. I completed my 12th Grade with a focus on Computer Science, scoring 77.8%, after finishing my 10th Grade with a score of 94.6%.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">"I successfully completed my higher secondary education in 2022"</span>
+    					<h2>Group Of Computer Science</h2>
+    					<span class="position">Annai Velankanni Matric Higher Secondary School At Pavoorchatram - 627806</span>
+    					<p class="mt-4">I excelled at Annai Velankanni Metric Higher Secondary School, achieving 94.6% in 10th grade and 77.8% in 12th grade with a focus on Computer Science. Graduating in 2022, I am equipped with a strong academic foundation and a passion for technology.</p>
+    				</div>
+    		
+    				
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>B.Tech in Computer Engineering (Specialization in Cybersecurity)
+							 </h2>
+    					<span class="position">Karunya University</span>
+    					<p class="mt-4">I am currently pursuing a Bachelor of Technology in Computer Engineering at Karunya University, Coimbatore, specializing in Cybersecurity. I am set to graduate in 2026, building on my strong foundation in computer engineering and expanding my expertise in cybersecurity to protect and defend digital systems.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="docs\CV.pdf"target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+	<section class="ftco-section ftco-no-pb" id="exp-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Experience</h1>
+            <h2 class="mb-4">Experience</h2>
+            <p>Experience That Speaks Louder Than Buzzwords!</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">April 2024 - August 2024</span>
+    					<h2>Cybersecurity Intern</h2>
+    					<span class="position"><b>Extion Infotech</b></span>
+    					<p class="mt-4">
+							<p>I completed a 2-month internship at <strong>Extion Infotech</strong>, where I focused on cybersecurity. During this period, I gained hands-on experience through four key projects:</p>
+							<ul>
+								<li><strong>1. Network Vulnerability Assessment with Nessus</strong></li>
+								<li><strong>2. Creating and Analyzing APK Backdoors</strong></li>
+								<li><strong>3. Performing and Analyzing a Networking Attack</strong></li>
+								<li><strong>4. Investigation of a Data Breach at ABC SecureBank</strong></li>
+							</ul>
+							<p>These projects provided me with valuable insights into various cybersecurity domains, enhancing my practical skills and knowledge.</p>
+							<p>Due to my performance, I was offered an additional <strong>3-month internship at no cost</strong>, which further allowed me to refine my expertise in the field.</p>
+							<p>My time at Extion Infotech was highly educational, offering a supportive environment and opportunities for real-world application of cybersecurity practices. I highly recommend the company to anyone looking to gain experience in this dynamic field.</p>
+							<p>To check all my offer letters and certificates, <a href="Extion.html" target="_blank">click me</a>.</p>
+							<p style="display: inline; margin-right: 8px;">
+								Click the icon to visit the company's LinkedIn page ➥
+							</p>
+							<div class="ftco-animate" style="display: inline;">
+								<a href="https://www.linkedin.com/company/extion-infotech/" target="_blank">
+									<span class="icon-linkedin"></span>
+								</a>.
+							</div>
+							
+						</body>
+						</html></p>
+    				</div>
+    		
+    				
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">July 2024- September 2024</span>
+    					<h2>Cyber Security Intern </h2>
+    					<span class="position">
+							Slash Mark IT Solutions</span>
+							<p class="mt-4">
+								During my time at Slash Mark IT Solutions, I dove deep into the world of cybersecurity, 
+								working on exciting projects that tested both my creativity and technical skills. Using my skills, 
+								I tackled tasks like:
+							</p>
+							<ul>
+								<li><strong>Text Encryption:</strong> Building a tool that made sure your secrets stay secret!</li>
+								<li><strong>Keylogger Software:</strong> Exploring how to log keystrokes (ethically, of course).</li>
+								<li><strong>Image Encryption:</strong> Turning images into digital puzzles only I had the key to solve.</li>
+								<li><strong>Facial Authentication System:</strong> Using OpenCV to make sure only the right face gets access.</li>
+								<li><strong>Credit Card Encryption:</strong> Because protecting sensitive data is no joke.</li>
+								<li><strong>Graphical User Authentication:</strong> Adding a fun twist to traditional logins with innovative graphical input.</li>
+							</ul>
+							<p>
+								This internship wasn’t just about coding—it was about solving real-world problems, learning the ins and outs of 
+								cybersecurity, and sometimes debugging until I saw code in my dreams. I left Slash Mark with sharper skills, 
+								a deeper understanding of secure systems, and a stronger passion for making technology safer for everyone.
+							</p>
+							<p>To check all my offer letters and certificates, <a href="SMI.html" target="_blank">click me</a>.</p>
+							<p style="display: inline; margin-right: 8px;">
+								Click the icon to visit the company's LinkedIn page ➥
+							</p>
+							<div class="ftco-animate" style="display: inline;">
+								<a href="https://www.linkedin.com/company/slash-mark/" target="_blank">
+									<span class="icon-linkedin"></span>
+								</a>.
+							</div>    				
+						</div>
+    				</div>
+    			</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">May 2024- July 2024</span>
+    					<h2>Cyber Security Intern </h2>
+    					<span class="position">
+							Cisco Networking Academy</span>
+							<p class="mt-4">
+								<p>
+									From May to July 2024, I completed Cisco’s virtual internship, tackling real-world cybersecurity and network design challenges using Cisco Packet Tracer. I analyzed network topologies, designed secure hybrid work environments, and implemented solutions to defend against misuse and cyber threats like DDoS attacks.
+								  </p>
+								  <p>
+									Want to know how I mapped networks, enhanced security, and created efficient solutions? 
+									<a href="Cisco.html" target="_blank">Click here</a> to learn more!
+								  </p>		
+						</div>
+    				</div>
+    			</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="docs\CV.pdf"target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Certifications</h1>
+            <h2 class="mb-4">Certifications</h2>
+            <p>The certificate isn’t just paper; it’s proof of commitment to excellence.</p>
+          </div>
+        </div>
+    		<div class="row">
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Coursera_Ethical_Hacking.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Coursera: EC-Council Ethical Hacking Essentials (EHE)</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Coursera_google_cybersecurity.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Coursera: Google Cybersecurity Certificate</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Internshala_ethical_hacking.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Internshala: Ethical Hacking Training</h3>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Microsoft_security,compliance_and_identity_fundamentals_Sc-900.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Microsoft's SC-900: Security, Compliance, and Identity Fundamentals</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\ThomasA-NDG Linux Essent-certificate.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">NDG Linux Essentials</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\CISCO-Networking_Basics_Badge.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Cisco: Networking Basics</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Cisco-Introduction_to_IoT_.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Cisco: Introduction to IoT</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\ThomasA-Programming_Esse-python.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Cisco: Programming Essentials in Python</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\ThomasA-Programming_for-C.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Cisco:  Programming Essentials in C</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\HR-python_basic.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">HackerRank: Basics of Python</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\HR_java_basic.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">HackerRank: Basics of Java</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\infosys_java.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Infosys Java Certificate</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Mongodb Python developer path_page-0001.jpg"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">MongoDB Python Developer Path</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\Coursera_google_Project_Management.pdf"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Coursera: Google Project Management</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="cert\DCA certificate.jpg"target="_blank" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">DCA: Diploma in Compuetr Applications</h3>
+							</div>
+						</a>
+					</div>
+				</div>
+    	</div>
+    </section>
+
+		
+		<section class="ftco-section" id="skills-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>Through dedication and practice, my skills are the foundation of every achievement I make.</p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Linux</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Ethical Hacking</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+							    <span>85%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Python</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							    <span>95%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Networking</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							    <span>90%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>HTML</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="80"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							    <span>80%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>Java Programming</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="60"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
+							    <span>60%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+ 
+
+    <section class="ftco-section ftco-project" id="projects-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">My Projects</h2>
+            <p>Planned with precision, executed with flair, and debugged with love.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/CreditCard.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/CREDIT-CARD-ENCRYPTION-AND-DECRYPTION"target="_blank">CREDIT CARD ENCRYPTION AND DECRYPTION</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/GUI-auth.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Creating-a-Secure-Graphical-User-Authentication-System"target="_blank">Graphical User Authentication System</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+
+    			<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/web-face.png);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Web-based-Facial-Authentication-System"target="_blank">Web Based Facial Authentication System</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/email-spam1.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Enhancing-Email-Security-Anomaly-Detection-for-Spam-Identification"target="_blank">Email Security Anomaly Detection for spam Identification</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="row">
+    					<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/img-steg.png);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="https://github.com/Thomas1510/Cyber-Security---Image-Encryption"target="_blank">Image Encryption - Steganography</a></h3>
+			    					<span>Cybersecurity Project</span>
+			    				</div>
+		    				</div>
+	    				</div>
+	    				<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/keylog.webp);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="https://github.com/Thomas1510/Project---Keylogger"target="_blank">KeyLogger</a></h3>
+			    					<span>Cybersecurity Project</span>
+			    				</div>
+		    				</div>
+	    				</div>
+    				</div>
+    			</div>
+				<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/crypt_1.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Cyber-Security-Project---Test-Encryption-and-Decryption"target="_blank">CRYPTOGRAPHY - TEXT ENCRYPTION AND DECRYPTION</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Network.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Performing-and-analysing-a-networking-attack"target="_blank">Performing and Analysing a Network Attacks</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+    		</div>
+			<div class="row">
+    			<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/splash-jpg.webp);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Creating-and-Analyzing-APK-Backdoors/"target="_blank">Creating and Analysing Apk Backdoors</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/nessus1.png);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Network-Vulnerability-Assessment-with-Nessus"target="_blank">Network Vulnerability Assessment with Nessus</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+
+    			<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/DataBreach.png);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Investigation-of-a-Data-Breach-at-ABC-SecureBank-"target="_blank">Investigation of Data Breach at ABC Secure Bank</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ment.png);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Mentor-Mentee-Management-System"target="_blank">Mentor-Mentee Management System</a></h3>
+	    					<span>Object-Oriented Programming Project</span>
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="row">
+    					<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/IS.png);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="https://github.com/Thomas1510/Internshala-Ethical-Hacking-Final-Project"target="_blank">Internshala Final Project</a></h3>
+			    					<span>Cybersecurity Project</span>
+			    				</div>
+		    				</div>
+	    				</div>
+	    				<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/voicerobo.jpg);">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="https://github.com/Thomas1510/Voice-Control-Robot-Using-RTOS"target="_blank">Voice Control Robot</a></h3>
+			    					<span>Embedded System Project</span>
+			    				</div>
+		    				</div>
+	    				</div>
+    				</div>
+    			</div>
+				<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/home.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/Home-Automation-System"target="_blank">Home Automation System</a></h3>
+	    					<span>Embedded System Project</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/clichat_enhanced.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/-Pythonic-Chat-Building-a-Command-Line-Chatroom/"target="_blank">Pythonic-Chat: Building a Command-Line Chatroom</a></h3>
+	    					<span>Python Project</span>
+	    				</div>
+    				</div>
+  				</div>
+				  <div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/LED.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/4x4x4-LED-Cube-using-ARDUINO-UNO/"target="_blank">4x4x4 LED Cube using Arduino UNO</a></h3>
+	    					<span>Embedded System Project</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/Honey1.png);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="https://github.com/Thomas1510/SSH-HONEYPOT/"target="_blank">SSH - Honeypot</a></h3>
+	    					<span>Cybersecurity Project</span>
+	    				</div>
+    				</div>
+  				</div>
+				  <div class="col-md-10">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" 
+						 style="background-image: url(images/gym_enhanced.jpg); width: 1110px; height: 500px;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="https://github.com/Thomas1510/Gym-Management-System/" target="_blank">Gym Management System</a></h3>
+							<span>Database Management System Project</span>
+						</div>
+					</div>
+				</div>
+				
+  				</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Competitions</h1>
+            <h2 class="mb-4">Achievements & Competitions</h2>
+            <p>Achievements fueled by hard work, caffeine, and a pinch of luck.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-6 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="Apoorv-CTF.html"target="_blank" class="block-20" style="background-image: url('cert/Apoorv.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">March 22 to 24th, 2024	</span>
+	                	<a href="Apoorv-CTF.html" target="_blank"class="mr-2">ApoorvCTF</a>
+	                	<a href="Apoorv-CTF.html" target="_blank"class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="Apoorv-CTF.html"target="_blank">ApoorvCTF is the annual flagship CTF organized by the students of IIIT Kottayam.</a></h3>
+                <p>The event is open to everyone and has something in store for beginners to seasoned experts.
+					Challenges categories include web, OSINT, forensics, reverse engineering and more!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="IITk-CTF.html"target="_blank" class="block-20" style="background-image: url('cert/IIT.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">June 21 to 23rd, 2024</span>
+	                	<a href="IITk-CTF.html"target="_blank" class="mr-2">Hack_IITK CTF</a>
+	                	<a href="IITk-CTF.html"target="_blank" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="IITk-CTF.html" target="_blank">A 48-hour cybersecurity competition organized by IIT Kanpur and conceptualized by C3iHub</a></h3>
+                <p>The event provided an immersive platform to challenge participants in identifying vulnerabilities and breaking through defenses across various cybersecurity domains.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<!--<div class="blog-entry">
+              <a href="#blog-section" class="block-20" style="background-image: url('images/imag3.jpg');" alt="Update Soon">
+              </a>
+              <div class="text mt-3 float-right d-block">
+              	<div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">Jan 27, 2025</span>
+	                	<a href="#blog-section" class="mr-2">Coming Soon</a>
+	                	<a href="#blog-section" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <h3 class="heading"><a href="#blog-section">---------</a></h3>
+                <p>Coming Soon.</p>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    	<div class="container">
+				<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Internships Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="19">0</strong>
+                <span>Complete Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Participated Competitions</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Major Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>I'm <span>Available</span> for Working</h2>
+						<p style="color:white;">Cybersecurity or Full-Stack Development? I’ve got you covered—because your systems deserve both innovation and protection.</p>
+						<p style="color:white;"><b><span>Let’s build something amazing together—and make hackers cry!</span></b></p>
+						
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<a href="mailto:thomasa1510.com?subject=Hiring%20Inquiry"target="_blank" class="btn btn-primary py-3 px-3">Hire me</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Location</h3>
+				  <p style="color: white;"><a href="https://maps.app.goo.gl/QMy3Ui75EEQYRd6M8"target="_blank">Tenkasi</a> </p>
+
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://8300838214"target="_blank">+91-8300838214</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=thomasa1510@gmail.com&su=Hiring"target="_blank">thomasa1510@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Website</h3>
+	            <p><a href="https://github.com/Thomas1510"target="_blank">Github.com</a></p>
+	          </div>
+          </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form action="https://api.web3forms.com/submit" method="POST" class="bg-light p-4 p-md-5 contact-form">
+			<input type="hidden" name="access_key" value="94d5e973-7589-4b07-98f7-f7fbe5d52d73">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Your Email" >
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" >
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message" ></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div class="img" style="background-image: url(images/main4-1.png);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p> I am a student in cybersecurity, self-motivated, reliable,
+				responsible and hard working person. I am able to work
+				well both in a team environment as well as using own
+				initiative. I am able to work well under pressure and
+				adhere to strict deadlines.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/thomas-a-008a60249/" target="_blank"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/Thomas1510" target="_blank"><span class="icon-github"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCxAJUCDBW_6ZCcqI0mgBwyw" target="_blank"><span class="icon-youtube"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#resume-section"><span class="icon-long-arrow-right mr-2"></span>Education</a></li>
+				<li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Certifications</a></li>
+				<li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Skills</a></li>
+                <li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+				<li><a href="#blog-section"><span class="icon-long-arrow-right mr-2"></span>Achievements	</a></li>
+                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Skills</h2>
+              <ul class="list-unstyled">
+                <li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Linux</a></li>
+                <li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Ethical Hacking</a></li>
+                <li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Networking</a></li>
+                <li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Python and Java Programming</a></li>
+                <li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Security Tools(Metasploit, Burp Suite, Wireshark, Nmap)</a></li>
+				<li><a href="#skills-section"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">India, Tamil Nadu, Tenkasi</span></li>
+	                <li><a href="tel://8300838214"><span class="icon icon-phone"></span><span class="text">+91-8300838214</span></a></li>
+	                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=thomasa1510@gmail.com&su=Hiring"target="_blank"><span class="icon icon-envelope"></span><span class="text">thomasa1510@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+        	</div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
